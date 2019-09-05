@@ -108,7 +108,7 @@ function componentCreater(title, date, firstParagraph, secondParagraph, thirdPar
   const para1 = document.createElement('p');
   const para2 = document.createElement('p');
   const para3 = document.createElement('p');
-  const expandButton = document.createElement('button');
+  const expandButton = document.createElement('span');
   // const buttonClose = document.createElement('button');
 
 
@@ -169,5 +169,7 @@ window.addEventListener('load', () => {
         item.secondParagraph,
         item.thirdParagraph
       ))
+
   })
+
 })

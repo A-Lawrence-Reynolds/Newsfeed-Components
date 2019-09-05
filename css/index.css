@@ -95,3 +95,17 @@ body {
   font-family: 'Roboto';
   background-color: #fffef7;
 }
+
+.menu-component {
+  display: none;
+  position: absolute;
+  top: 100%;
+}
+
+.menu-component>ul>li {
+  color: black;
+}
+
+.menu-component.menu--open {
+  display: block;
+}
