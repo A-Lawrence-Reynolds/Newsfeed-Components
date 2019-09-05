@@ -1,7 +1,6 @@
 /* This is the data we will be using to create our article components */
 /* Look over this data, then proceed to line 91*/
-const data = [
-  {
+const data = [{
     title: 'Lambda School Students: "We\'re the best!"',
     date: 'Nov 5th, 2018',
     firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
@@ -88,27 +87,87 @@ const data = [
   }
 ];
 
-/* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
-  
-  <div class="article">
-    <h2>{title of the article}</h2>
-    <p class="date">{date of the article}</p>
+//  Step 1: Create a function that creates a component. You will want your component to look like the template below: 
 
-    {three separate paragraph elements}
+// <div class="article">
+// <h2>{title of the article}</h2>
+// <p class="date">{date of the article}</p>
 
-    <span class='expandButton'></span>
-  </div>
+// {three separate paragraph elements}
 
-  Hint: You will need to use createElement more than once here!
+// <span class='expandButton'></span>
+// </div>
 
-  Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+// Hint: You will need to use createElement more than once here!
 
-  Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
 
-  Step 3: return the entire component.
+function componentCreater(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2');
+  const articleDate = document.createElement('p');
+  const para1 = document.createElement('p');
+  const para2 = document.createElement('p');
+  const para3 = document.createElement('p');
+  const expandButton = document.createElement('button');
+  // const buttonClose = document.createElement('button');
 
-  Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
 
-  Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
-*/
+
+  // Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
+
+
+
+
+  ////////append Child/////////////
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(para1);
+  article.appendChild(para2);
+  article.appendChild(para3);
+  article.appendChild(expandButton);
+  // article.appendChild(buttonClose);
+
+  ///////// class List ///////////////////////
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  expandButton.classList.add('expandButton');
+  // buttonClose.classsList.add('close');
+
+  //////text content//////////
+
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  para1.textContent = firstParagraph;
+  para2.textContent = secondParagraph;
+  para3.textContent = thirdParagraph;
+  expandButton.textContent = 'here';
+
+  expandButton.addEventListener('click', () => {
+    article.classList.toggle('article-open');
+
+  })
+
+  // Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
+
+  // Step 3: return the entire component.
+
+  // Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
+
+  // Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
+  return article
+}
+window.addEventListener('load', () => {
+  container = document.querySelector('.articles');
+  data.forEach(item => {
+    console.log(item)
+    container.appendChild(
+      componentCreater(
+        item.title,
+        item.date,
+        item.firstParagraph,
+        item.secondParagraph,
+        item.thirdParagraph
+      ))
+  })
+})
