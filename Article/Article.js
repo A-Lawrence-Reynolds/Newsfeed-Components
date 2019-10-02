@@ -71,6 +71,45 @@ const data = [
         Castform Lotad the power that's inside Burnt Berry Makuhita. Ghost Ariados Corphish Dusclops Golbat Gligar Zweilous.`
   },
   {
+    title: "Bob talks ",
+    date: "feb 13th, 2016",
+    firstParagraph: `We have all at one time or another mixed some mud. Be careful. You can always add more - but you can't take it away. Work that paint. In life you need colors. Automatically, all of these beautiful, beautiful things will happen. Maybe there's a happy little waterfall happening over here.`,
+
+    secondParagraph: `Maybe there's a happy little Evergreen that lives here. Do an almighty painting with us. Just let go - and fall like a little waterfall. You can do anything here - the only pre-requisite is that it makes you happy. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.
+
+    `,
+
+    thirdParagraph: `Just take out whatever you don't want. It'll change your entire perspective. And right there you got an almighty cloud. I guess I'm a little weird. I like to talk to trees and animals. That's okay though; I have more fun than most people. Let's put some happy trees and bushes back in here.`
+  },
+  {
+    title: "React vs Angular vs Vue",
+    date: "June 7th, 2019",
+    firstParagraph: `Bulbasaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ivysaur Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Venusaur Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charmander Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Charmeleon Lorem ipsum dolor sit amet, consectetur adipiscing elit. Charizard Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Squirtle Lorem ipsum dolor sit amet, consectetur adipiscing elit. Wartortle Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Blastoise Lorem ipsum dolor sit amet, consectetur adipiscing elit. Caterpie Lorem
+        ipsum dolor sit amet, consectetur adipiscing elit. Metapod Lorem ipsum dolor sit amet, consectetur adipiscing elit. Butterfree
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Weedle Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Kakuna Lorem ipsum dolor sit amet, consectetur adipiscing elit. Beedrill Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit.`,
+
+    secondParagraph: `Pidgey Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pidgeotto Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Pidgeot Lorem ipsum dolor sit amet, consectetur adipiscing elit. Rattata Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Raticate Lorem ipsum dolor sit amet, consectetur adipiscing elit. Spearow Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Fearow Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ekans Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Arbok Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pikachu Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Raichu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sandshrew Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit. Sandslash Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nidoran Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Nidorina Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nidoqueen Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit. Nidoran Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nidorino Lorem ipsum dolor
+        sit amet, consectetur adipiscing elit. Nidoking Lorem ipsum`,
+
+    thirdParagraph: `Gotta catch 'em all Horsea gym Ninjask Absol Sinnoh Poliwag. Gotta catch 'em all Youngster wants to fight Soda Pop Floatzel 
+        Leech Life Seismitoad Ariados. Earthquake Pokemon Glitch City Tail Whip Skitty Ekans Dialga. Ut aliquip ex ea commodo consequat James 
+        Castform Lotad the power that's inside Burnt Berry Makuhita. Ghost Ariados Corphish Dusclops Golbat Gligar Zweilous.`
+  },
+  {
     title: "Professional Software Development in 2019",
     date: "Jan 1st, 2019",
     firstParagraph: `Hodor hodor HODOR! Hodor hodor - hodor, hodor. Hodor hodor... Hodor hodor hodor; hodor hodor. Hodor hodor hodor, hodor, hodor
@@ -128,7 +167,7 @@ function componentCreater(
   para1.textContent = firstParagraph;
   para2.textContent = secondParagraph;
   para3.textContent = thirdParagraph;
-  expandButton.textContent = "Read More";
+  expandButton.textContent = "Read";
 
   expandButton.addEventListener("click", () => {
     article.classList.toggle("article-open");
@@ -158,86 +197,3 @@ window.addEventListener("load", () => {
     );
   });
 });
-
-// function componentcreater(
-//   title,
-//   date,
-//   firstParagraph,
-//   secondParagraph,
-//   thirdParagraph
-// ) {
-//   const article = document.createElement("div");
-//   article.classList.add("article");
-
-//   const articleTitle = document.createElement("h2");
-//   article.appendChild(articleTitle);
-//   articleTitle.textContent = title;
-
-//   const articleDate = document.createElement("p");
-//   articleDate.classList.add("date");
-//   article.appendChild(articleDate);
-//   articleDate.textContent = date;
-
-//   const paragraphOne = document.createElement("p");
-//   article.appendChild(paragraphOne);
-//   paragraphOne.textContent = firstParagraph;
-
-//   const paragraphTwo = document.createElement("p");
-//   article.appendChild(paragraphTwo);
-//   paragraphTwo.textContent = secondParagraph;
-
-//   const paragraphThree = document.createElement("p");
-//   article.appendChild(paragraphThree);
-//   paragraphThree.textContent = thirdParagraph;
-
-//   const expandButton = document.createElement("span");
-//   expandButton.classList.add("expandButton");
-//   article.appendChild(expandButton);
-//   expandButton.textContent = "here";
-//   expandbutton.addEventListener("click", () => {
-//     article.classList.toggle(article - open);
-//   });
-
-//   return article;
-// }
-
-// window.addEventListener("load", () => {
-//   container = document.querySelector(".articles");
-//   data.forEach(item => {
-//     console.log(item);
-//     container.appendChild(
-//       componentCreater(
-//         item.title,
-//         item.date,
-//         item.firstParagraph,
-//         item.secondParagraph,
-//         item.thirdParagraph
-//       )
-//     );
-//   });
-// });
-
-// /* Step 1: Create a function that creates a component. You will want your component to look like the template below:
-
-//   <div class="article">
-//     <h2>{title of the article}</h2>
-//     <p class="date">{date of the article}</p>
-
-//     {three separate paragraph elements}
-
-//     <span class='expandButton'></span>
-//   </div>
-
-//   Hint: You will need to use createElement more than once here!
-
-//   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
-
-//   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
-
-//   Step 3: return the entire component.
-
-//   Step 4: Map over the data, creating a component for each oject and add each component to the DOM as children of the 'articles' div.
-
-//   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
-
-// */
